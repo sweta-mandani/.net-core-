@@ -1,0 +1,12 @@
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\bin\Debug\netcoreapp3.1\HRM.BAL.deps.json
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\bin\Debug\netcoreapp3.1\HRM.BAL.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\bin\Debug\netcoreapp3.1\HRM.DATA.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\bin\Debug\netcoreapp3.1\HRM.DATA.pdb
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.csprojAssemblyReference.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.AssemblyInfoInputs.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.AssemblyInfo.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.csproj.CopyComplete
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\bin\Debug\netcoreapp3.1\HRM.BAL.pdb
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.csproj.CoreCompileInputs.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.BAL\obj\Debug\netcoreapp3.1\HRM.BAL.pdb
