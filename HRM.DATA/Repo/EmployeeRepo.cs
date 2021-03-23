@@ -18,10 +18,10 @@ namespace HRM.DATA.Repo
             EmployeeEntity = context.Set<Employee>();
         }
 
-        public void DeleteEmployee(long id)
+        public void DeleteEmployee(int EmployeeId )
         {
-            Employee student = GetEmployee(id);
-            EmployeeEntity.Remove(student);
+            Employee emp = GetEmployee(EmployeeId);
+            EmployeeEntity.Remove(emp);
             context.SaveChanges();
         }
 
@@ -30,9 +30,9 @@ namespace HRM.DATA.Repo
             return EmployeeEntity.AsEnumerable();
         }
 
-        public Employee GetEmployee(long id)
+        public Employee GetEmployee(int EmployeeId)
         {
-            return EmployeeEntity.SingleOrDefault(s => s.EmployeeId == id);
+            return EmployeeEntity.SingleOrDefault(s => s.EmployeeId == EmployeeId);
         }
 
         public void SaveEmployee(Employee employee)
@@ -41,7 +41,7 @@ namespace HRM.DATA.Repo
             context.SaveChanges();
         }
 
-        public void UpdateStudent(Employee employee)
+        public void UpdateEmployee(Employee employee)
         {
             context.SaveChanges();
         }

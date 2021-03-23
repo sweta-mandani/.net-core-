@@ -4,9 +4,11 @@ using HRM.BAL.ManagerRepo;
 using HRM.DATA;
 using HRM.DATA.Interface;
 using HRM.DATA.Repo;
+using Human_Resource_Mangement.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,9 +33,30 @@ namespace Human_Resource_Mangement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+           
             services.AddTransient<IEmployeeRepo, EmployeeRepo>();
+            services.AddIdentity<AppUser, IdentityRole>(config =>
+            {
+                // User defined password policy settings.  
+                config.Password.RequiredLength = 4;
+                config.Password.RequireDigit = false;
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = false;
+            })
+                .AddEntityFrameworkStores<ApplicationDBContext>()
+                .AddDefaultTokenProviders();
+
+            // Cookie settings   
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.Cookie.Name = "DemoProjectCookie";
+                config.LoginPath = "/Account/Login"; // User defined login path  
+                config.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+            });
+
+
             services.AddControllersWithViews();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,14 +76,17 @@ namespace Human_Resource_Mangement
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
+
+           
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }

@@ -7,5 +7,6 @@ C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\netcoreapp3.1\HRM.DATA.pdb
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\bin\Debug\netcoreapp3.1\HRM.DATA.runtimeconfig.json
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\bin\Debug\netcoreapp3.1\HRM.DATA.runtimeconfig.dev.json
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\netcoreapp3.1\HRM.DATA.csproj.CoreCompileInputs.cache
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\netcoreapp3.1\HRM.DATA.genruntimeconfig.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\netcoreapp3.1\HRM.DATA.csprojAssemblyReference.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\HRM.DATA\obj\Debug\netcoreapp3.1\HRM.DATA.csproj.CoreCompileInputs.cache

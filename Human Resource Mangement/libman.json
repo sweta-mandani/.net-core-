@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "jsdelivr",
+  "libraries": [
+    {
+      "library": "fullpage.js@3.1.0",
+      "destination": "Views/Shared/fullpage.js/"
+    }
+  ]
+}

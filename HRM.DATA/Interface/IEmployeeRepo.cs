@@ -8,8 +8,8 @@ namespace HRM.DATA.Interface
     {
         void SaveEmployee(Employee employee);
         IEnumerable<Employee> GetAllEmployee();
-        Employee GetEmployee(long id);
-        void DeleteEmployee(long id);
-        void UpdateStudent(Employee employee);
+        Employee GetEmployee(int EmployeeId);
+        void DeleteEmployee(int EmployeeId);
+        void UpdateEmployee(Employee employee);
     }
 }

@@ -17,7 +17,6 @@ C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mang
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.TagHelpers.input.cache
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.TagHelpers.output.cache
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.RazorCoreGenerate.cache
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -161,9 +160,29 @@ C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mang
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.csproj.CoreCompileInputs.cache
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Unity.Container.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\HRM.BAL.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\HRM.BAL.pdb
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Views\Shared\fullpage.js\package.json
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditEmployee.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddEmployee.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\bundleconfig.json
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Pages\_Layout.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Display.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout1.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.csproj.CoreCompileInputs.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\DeleteEmployee.cshtml.g.cs
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Razor\Views\Home\DetailEmployee.cshtml.g.cs

@@ -1,6 +1,7 @@
 ﻿using HRM.DATA;
 using HRM.DATA.Interface;
 using Human_Resource_Mangement.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,13 +14,19 @@ namespace Human_Resource_Mangement.Controllers
 {
     public class HomeController : Controller
     {
+        
         private IEmployeeRepo _EmployeeRepo;
 
         public HomeController(IEmployeeRepo EmployeeRepo)
         {
             this._EmployeeRepo = EmployeeRepo;
         }
+        public IActionResult Display()
+        {
+            return View();
 
+
+        }
         [HttpGet]
         public IActionResult Index()
         {
@@ -38,16 +45,145 @@ namespace Human_Resource_Mangement.Controllers
         
 
     }
-
-    public IActionResult Privacy()
+        [HttpGet("{EmployeeId}")]
+        public IActionResult DetailEmployee(int EmployeeId)
         {
-            return View();
+            Employee model = _EmployeeRepo.GetEmployee(EmployeeId);
+            return View(model);
+
+
+        }
+        [HttpGet]
+        public IActionResult AddEmployee(int? EmployeeId)
+        {
+            Employee model = new Employee();
+          
+            if (EmployeeId.HasValue)
+            {
+                Employee emp = _EmployeeRepo.GetEmployee(EmployeeId.Value); 
+                if (emp != null)
+                {
+                    model.EmployeeId = emp.EmployeeId;
+                    model.Name = emp.Name;
+                    model.Salary = emp.Salary;
+                    model.IsManager = emp.IsManager;
+                    model.Manager = emp.Manager;
+                    model.Phone = emp.Phone;
+                  
+                    model.Department = emp.Department;
+                    model.Email = emp.Email;
+                }
+            }
+            return PartialView("~/Views/Home/AddEmployee.cshtml", model);
+        }
+        [HttpPost]
+        public ActionResult AddEmployee(int? EmployeeId, Employee model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    bool isNew = !EmployeeId.HasValue;
+                    Employee emp = isNew ? new Employee
+                    {
+                      
+                    } : _EmployeeRepo.GetEmployee(EmployeeId.Value);
+                     emp.EmployeeId = model.EmployeeId;
+                     emp.Name=model.Name;
+                     emp.Salary=model.Salary;
+                     emp.IsManager=model.IsManager;
+                     emp.Manager=model.Manager;
+                     emp.Phone=model.Phone;
+                     emp.Department=model.Department;
+                     emp.Email=model.Email;
+                
+                if (isNew)
+                    {
+                    _EmployeeRepo.SaveEmployee(emp);
+                    }
+                    else
+                    {
+                    _EmployeeRepo.UpdateEmployee(emp);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult EditEmployee(int? EmployeeId)
+        {
+            Employee model = new Employee();
+            if (EmployeeId.HasValue)
+            {
+                Employee emp = _EmployeeRepo.GetEmployee(EmployeeId.Value);
+                if (emp != null)
+                {
+                    model.EmployeeId = emp.EmployeeId;
+                    model.Name = emp.Name;
+                    model.Salary = emp.Salary;
+                    model.IsManager = emp.IsManager;
+                    model.Manager = emp.Manager;
+                    model.Phone = emp.Phone;
+                    model.Department = emp.Department;
+                    model.Email = emp.Email;
+                }
+            }
+            return PartialView("~/Views/Home/EditEmployee.cshtml", model);
+        }
+        [HttpPost]
+        public ActionResult EditEmployee(int? EmployeeId, Employee model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    bool isNew = !EmployeeId.HasValue;
+                    Employee emp = isNew ? new Employee
+                    {
+
+                    } : _EmployeeRepo.GetEmployee(EmployeeId.Value);
+                    emp.EmployeeId = model.EmployeeId;
+                    emp.Name = model.Name;
+                    emp.Salary = model.Salary;
+                    emp.IsManager = model.IsManager;
+                    emp.Manager = model.Manager;
+                    emp.Phone = model.Phone;
+                    emp.Department = model.Department;
+                    emp.Email = model.Email;
+
+                    if (isNew)
+                    {
+                        _EmployeeRepo.SaveEmployee(emp);
+                    }
+                    else
+                    {
+                        _EmployeeRepo.UpdateEmployee(emp);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return RedirectToAction("Index");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpGet]
+        public IActionResult DeleteEmployee(int EmployeeId )
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+           Employee emp = _EmployeeRepo.GetEmployee(EmployeeId);
+
+            return View(emp);
+        }
+        [HttpPost]
+        public IActionResult DeleteEmployee(int EmployeeId, IFormCollection form)
+        {
+            _EmployeeRepo.DeleteEmployee(EmployeeId);
+            return RedirectToAction("Index");
         }
     }
 }
