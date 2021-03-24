@@ -21,6 +21,7 @@ namespace Human_Resource_Mangement.Controllers
             _signInManager = signInManager;
         }
 
+   
         public IActionResult Index()
         {
             return View();
@@ -81,7 +82,7 @@ namespace Human_Resource_Mangement.Controllers
 
             var user = new AppUser
             {
-                Id = "101",
+                Id = appUser.Id,
                 UserName = appUser.UserName,
                 Email = appUser.Email,
                 Name = appUser.Name,

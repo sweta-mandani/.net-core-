@@ -32,6 +32,15 @@ namespace Human_Resource_Mangement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCaching(options =>
+            {
+
+            });
+            services.AddScoped<CustomActionFilter>();
+            services.AddResponseCaching(options =>
+            {
+
+            });
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
            
             services.AddTransient<IEmployeeRepo, EmployeeRepo>();
@@ -45,7 +54,7 @@ namespace Human_Resource_Mangement
             })
                 .AddEntityFrameworkStores<ApplicationDBContext>()
                 .AddDefaultTokenProviders();
-
+            
             // Cookie settings   
             services.ConfigureApplicationCookie(config =>
             {
@@ -62,6 +71,15 @@ namespace Human_Resource_Mangement
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.Use(async (context, nextMiddleware) =>
+            {
+                context.Response.OnStarting(() =>
+                {
+                    context.Response.Headers.Add("Site", "Sweta");
+                    return Task.FromResult(0);
+                });
+                await nextMiddleware();
+            });
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -72,15 +90,21 @@ namespace Human_Resource_Mangement
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+           
 
             app.UseRouting();
+            app.UseResponseCaching();
+
+
+
             app.UseAuthentication();
 
             app.UseAuthorization();
-
            
+
 
             app.UseEndpoints(endpoints =>
             {

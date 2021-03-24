@@ -30,12 +30,12 @@ namespace HRM.DATA.Repo
             return EmployeeEntity.AsEnumerable();
         }
 
-        public Employee GetEmployee(int EmployeeId)
+        public  Employee GetEmployee(int EmployeeId)
         {
             return EmployeeEntity.SingleOrDefault(s => s.EmployeeId == EmployeeId);
         }
 
-        public void SaveEmployee(Employee employee)
+        public  void SaveEmployee(Employee employee)
         {
             context.Entry(employee).State = EntityState.Added;
             context.SaveChanges();

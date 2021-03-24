@@ -4,6 +4,7 @@ using Human_Resource_Mangement.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Human_Resource_Mangement.Controllers
 {
+
     public class HomeController : Controller
     {
         
@@ -21,12 +23,16 @@ namespace Human_Resource_Mangement.Controllers
         {
             this._EmployeeRepo = EmployeeRepo;
         }
+        [ServiceFilter(typeof(CustomActionFilter))]
+       
         public IActionResult Display()
         {
             return View();
 
 
         }
+      
+        [ResponseCache(Duration = 5)]
         [HttpGet]
         public IActionResult Index()
         {
