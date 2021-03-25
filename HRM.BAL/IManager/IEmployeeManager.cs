@@ -11,6 +11,6 @@ namespace HRM.BAL.IManager
         IEnumerable<Employee> GetAllEmployee();
         Employee GetEmployee(long id);
         void DeleteEmployee(long id);
-        void UpdateStudent(Employee employee);
+        void UpdateEmployee(Employee employee);
     }
 }

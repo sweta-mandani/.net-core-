@@ -1,11 +1,10 @@
-﻿@model HRM.DATA.Employee
+﻿@*----------------------------------------------------------Edit Employee view------------------------------------------------------------------*@
+@model HRM.DATA.Employee
+
+
 
 @{
-    ViewData["Title"] = "AddEmployee";
-}
-
-@{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit Employee";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
@@ -22,7 +21,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Department" class="control-label"></label>
-                <select asp-for="Department" asp-items="Html.GetEnumSelectList<Department>()" class="form-control"></select>
+                <select id="Department" name="Department" class="form-control">
+                    <option value=" ">Select option</option>
+                    <option value="IT">IT</option>
+                    <option value="AutoMobile">AutoMobile</option>
+                    <option value="CIVIL">CIVIL</option>
+                </select>
                 <span asp-validation-for="Department" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -37,7 +41,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Manager" class="control-label"></label>
-                <select asp-for="Manager" asp-items="Html.GetEnumSelectList(typeof(Manager))" class="form-control"></select>
+                <select id="Manager" name="Manager" class="form-control">
+                    <option value=" ">Select option</option>
+                    <option value="CEO">CEO</option>
+                    <option value="COO">COO</option>
+                    <option value="CFO">CFO</option>
+                </select>
                 <span asp-validation-for="Manager" class="text-danger"></span>
             </div>
             <div class="form-group">

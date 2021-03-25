@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,16 @@ namespace Human_Resource_Mangement.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly ILogger<HomeController> _logger;
+
+       
         public AccountController(
                    UserManager<AppUser> userManager,
-                   SignInManager<AppUser> signInManager)
+                   SignInManager<AppUser> signInManager, ILogger<HomeController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _logger =logger;
         }
 
    
@@ -42,7 +47,7 @@ namespace Human_Resource_Mangement.Controllers
 
             return View(user);
         }
-
+        // Login 
         [HttpGet]
         public IActionResult Login()
         {
@@ -63,13 +68,14 @@ namespace Human_Resource_Mangement.Controllers
 
                 if (signInResult.Succeeded)
                 {
+                    _logger.LogInformation("Login Successfully");
                     return RedirectToAction("Display","Home");
                 }
             }
 
             return RedirectToAction("Register");
         }
-
+         // registration 
         public IActionResult Register()
         {
             return View();
@@ -101,6 +107,7 @@ namespace Human_Resource_Mangement.Controllers
 
                 if (signInResult.Succeeded)
                 {
+                    _logger.LogInformation("register Successfully");
                     return RedirectToAction("Login","Account");
                 }
             }
@@ -111,6 +118,7 @@ namespace Human_Resource_Mangement.Controllers
         public async Task<IActionResult> LogOut(string username, string password)
         {
             await _signInManager.SignOutAsync();
+            _logger.LogInformation(" logout Successfully");
             return RedirectToAction("Login","Account");
         }
     }

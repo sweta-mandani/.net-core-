@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,8 +43,11 @@ namespace Human_Resource_Mangement
 
             });
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        
+            services.AddTransient(typeof(IEmployeeRepo), typeof(EmployeeRepo));
+
+
            
-            services.AddTransient<IEmployeeRepo, EmployeeRepo>();
             services.AddIdentity<AppUser, IdentityRole>(config =>
             {
                 // User defined password policy settings.  
@@ -69,8 +73,10 @@ namespace Human_Resource_Mangement
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
+
         {
+            loggerFactory.AddFile($"C:\\Users\\sweta.mandani\\source\\repos\\Human Resource Mangement\\Logs\\Log.txt");
             app.Use(async (context, nextMiddleware) =>
             {
                 context.Response.OnStarting(() =>

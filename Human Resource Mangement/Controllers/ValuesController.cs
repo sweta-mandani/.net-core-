@@ -40,8 +40,8 @@ namespace Human_Resource_Mangement.Controllers
 
             // POST api/<ValuesController>
             [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Employee employee)
-        {
+            public async Task<ActionResult> Post([FromBody] Employee employee)
+            {
             if (employee == null)
             {
                 return NotFound();
@@ -57,14 +57,21 @@ namespace Human_Resource_Mangement.Controllers
             }
         }
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult> Put([FromBody] Employee employee)
         {
-        }
-
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            try
+            {
+                _repo.UpdateEmployee(employee);
+                return Ok("Value updated");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
     }
 }

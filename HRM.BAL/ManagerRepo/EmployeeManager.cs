@@ -33,9 +33,10 @@ namespace HRM.BAL.ManagerRepo
              _EmployeeRepo.SaveEmployee(employee);
         }
 
-        public void UpdateStudent(Employee employee)
+        public void UpdateEmployee(Employee employee)
         {
-            _EmployeeRepo.UpdateStudent(employee);
+            _EmployeeRepo.UpdateEmployee(employee);
+
         }
     }
 }

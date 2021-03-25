@@ -16,13 +16,18 @@ namespace Human_Resource_Mangement.Controllers
 
     public class HomeController : Controller
     {
-        
+        private readonly ILogger<HomeController> _logger;
+
         private IEmployeeRepo _EmployeeRepo;
 
-        public HomeController(IEmployeeRepo EmployeeRepo)
+        public HomeController(IEmployeeRepo EmployeeRepo, ILogger<HomeController> logger)
         {
             this._EmployeeRepo = EmployeeRepo;
+            _logger = logger;
         }
+      
+        // Home Page
+        
         [ServiceFilter(typeof(CustomActionFilter))]
        
         public IActionResult Display()
@@ -31,7 +36,7 @@ namespace Human_Resource_Mangement.Controllers
 
 
         }
-      
+      //Employee List
         [ResponseCache(Duration = 5)]
         [HttpGet]
         public IActionResult Index()
@@ -47,6 +52,7 @@ namespace Human_Resource_Mangement.Controllers
                 Department=s.Department,
                 Email = s.Email
             }) ;
+            _logger.LogInformation("The EmployeeList access");
             return View("Index", model);
         
 
@@ -55,10 +61,13 @@ namespace Human_Resource_Mangement.Controllers
         public IActionResult DetailEmployee(int EmployeeId)
         {
             Employee model = _EmployeeRepo.GetEmployee(EmployeeId);
+            _logger.LogInformation("The Deatail of employee access");
             return View(model);
 
 
         }
+
+        //Add Employee
         [HttpGet]
         public IActionResult AddEmployee(int? EmployeeId)
         {
@@ -117,8 +126,11 @@ namespace Human_Resource_Mangement.Controllers
             {
                 throw ex;
             }
+            _logger.LogInformation(" Add Employee Succeefully");
             return RedirectToAction("Index");
         }
+
+        //Edit Employee
         [HttpGet]
         public IActionResult EditEmployee(int? EmployeeId)
         {
@@ -175,9 +187,10 @@ namespace Human_Resource_Mangement.Controllers
             {
                 throw ex;
             }
+            _logger.LogInformation(" update employee successfully");
             return RedirectToAction("Index");
         }
-
+        //DeleteEmployee
         [HttpGet]
         public IActionResult DeleteEmployee(int EmployeeId )
         {
@@ -189,6 +202,7 @@ namespace Human_Resource_Mangement.Controllers
         public IActionResult DeleteEmployee(int EmployeeId, IFormCollection form)
         {
             _EmployeeRepo.DeleteEmployee(EmployeeId);
+            _logger.LogInformation(" Delete Employee");
             return RedirectToAction("Index");
         }
     }

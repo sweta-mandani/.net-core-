@@ -184,8 +184,6 @@ C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mang
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.pdb
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.genruntimeconfig.cache
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.csproj.CoreCompileInputs.cache
-C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
@@ -206,3 +204,12 @@ C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mang
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.csproj.CoreCompileInputs.cache
+C:\Users\sweta.mandani\source\repos\Human Resource Mangement\Human Resource Mangement\obj\Debug\netcoreapp3.1\Human Resource Mangement.MvcApplicationPartsAssemblyInfo.cache
